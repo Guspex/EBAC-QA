@@ -1,0 +1,12 @@
+Dados do aluno
+
+-Primeiro Nome: André Dienes Friedrich
+-Profissão: Estudante
+-Cidade: São Bento do Sul
+-O que faz nas horas vaga: Estudo
+-Feedback sobre o curso Qualidade de Software: Até o momento está muito bom, aprendendo muitas funcionalidades e conceitos.
+-Feedback sobre a plataforma de estudo da EBAC: Plataforma simples e funcional, muito intuitiva.
+
+Obrigado!!!
+
+
