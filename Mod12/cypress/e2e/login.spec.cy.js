@@ -12,14 +12,14 @@ context('Funcionalidade', () => {
         cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain', 'Olá, teste_aluno20 (não é teste_aluno20? Sair)')
     })
     it('Deve fazer login com sucesso - com base de dados', () => {
-        cy.get('#username').type(perfil.usario)
+        cy.get('#username').type(perfil.usuario)
         cy.get('#password').type(perfil.senha)
         cy.get('.woocommerce-form > .button').click()
         cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain', 'Olá,')
     })
     it('Deve fazer login com sucesso - com fixture', () => {
         cy.fixture('perfil').then(dados => {
-            cy.get('#username').type(perfil.usario)
+            cy.get('#username').type(perfil.usuario)
             cy.get('#password').type(perfil.senha, {log:false})
             cy.get('.woocommerce-form > .button').click()
             cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain', 'Olá,')
