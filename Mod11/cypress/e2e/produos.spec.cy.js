@@ -13,6 +13,7 @@ describe('Página de produtos', () => {
         cy.get('.button-variable-item-Orange').click()
         cy.get('.input-text').clear().type(qtde)
         cy.get('.single_add_to_cart_button').click()
+        cy.get('.dropdown-toggle > .mini-cart-items').should('contain', qtde)
         cy.get('.woocommerce-message > .button').click()
     });
 });
