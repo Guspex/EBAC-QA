@@ -36,6 +36,6 @@ Cypress.Commands.add('adicionarProdutos', (tamanho, cor, qtde) => {
         cy.get('.button-variable-item-' + cor).click()
         cy.get('.input-text').clear().type(qtde)
         cy.get('.single_add_to_cart_button').click()
-        cy.get('.dropdown-toggle > .mini-cart-items').should('contain', qtde)
+        cy.get('.dropdown-toggle > .mini-cart-items')
 })
 
