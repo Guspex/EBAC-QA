@@ -1,6 +1,12 @@
 /// <reference types="cypress"/>
 
 describe('Testes da Funcionalidade Produtos', () => {
+    let token;
+    before(() => {
+        cy.token('fulano@qa.com', 'teste').then(tkn => {
+            token = tkn
+        })
+    });
     it('Teste para listar produtos', () => {
         cy.request({
             method: 'GET',
@@ -12,21 +18,80 @@ describe('Testes da Funcionalidade Produtos', () => {
             expect(response.duration).to.be.lessThan(10)
         })
     });
-
     it.only('Cadastrar novo produto', () => {
-        cy.request({
-            method: 'POST',
-            url: 'produtos',
-            body: {
-                "nome": "Mouse 2 Guspex",
-                "preco": 770,
-                "descricao": "Mouse",
-                "quantidade": 100
-              },
-              headers: {authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZ1bGFub0BxYS5jb20iLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNjYxODc2NjA2LCJleHAiOjE2NjE4NzcyMDZ9.v_7PcXxtzQunp39KivtsDG2DkAy8tQhXJ-8y6Y9GqrM'}
-        }).then((response) => {
+        cy.cadastrarProduto(token, 'Produto EBAC' + Math.floor(Math.random() * 1000), Math.floor(Math.random() * 100), 'Descrição Produto Novo', Math.floor(Math.random() * 10)).then((response) => {
             expect(response.status).to.equal(201)
             expect(response.body.message).to.equal("Cadastro realizado com sucesso")
         });
     });
-})
+    it('Deve validar mensagem de erro ao cadastrar produto repetido', () => {
+        cy.cadastrarProduto(token, "Mouse 2 Guspex", 400, "Mouse", 10)
+            .then((response) => {
+                expect(response.status).to.equal(400)
+                expect(response.body.message).to.equal("Já existe produto com este nome")
+            });
+    });
+
+    it('Deve pegar um produto e alterar', () => {
+        cy.request('produtos').then(response => {
+            cy.log(response.body.produtos[0]._id)
+            let id = response.body.produtos[0]._id
+            cy.request({
+                method: 'PUT',
+                url: `produtos/${id}`,
+                headers: {
+                    authorization: token
+                },
+                body: {
+                    "nome": produto,
+                    "preco": preco,
+                    "descricao": descricao,
+                    "quantidade": quantidade
+                }
+            }).then((response) => {
+                expect(response.status).to.equal(200)
+                expect(response.body.message).to.equal("Registro alterado com sucesso")
+            });
+        })
+    });
+
+    it('Deve alterar um produto cadastrado previamente', () => {
+        cy.cadastrarProduto(token, 'Produto EBAC' + Math.floor(Math.random() * 1000), Math.floor(Math.random() * 100), 'Descrição Produto Novo', Math.floor(Math.random() * 10)).then(response => {
+            cy.log(response.body.produtos[0]._id)
+            let id = response.body._id
+            cy.request({
+                method: 'PUT',
+                url: `produtos/${id}`,
+                headers: {
+                    authorization: token
+                },
+                body: {
+                    "nome": produto,
+                    "preco": preco,
+                    "descricao": descricao,
+                    "quantidade": quantidade
+                }
+            }).then((response) => {
+                expect(response.status).to.equal(200)
+                expect(response.body.message).to.equal("Registro alterado com sucesso")
+            });
+        });
+    });
+
+    it('Deve deletar um produto cadastrado previamente', () => {
+        cy.cadastrarProduto(token, 'Produto EBAC' + Math.floor(Math.random() * 1000), Math.floor(Math.random() * 100), 'Descrição Produto Novo', Math.floor(Math.random() * 10)).then(response => {
+            cy.log(response.body.produtos[0]._id)
+            let id = response.body._id
+            cy.request({
+                method: 'DELETE',
+                url: `produtos/${id}`,
+                headers: {
+                    authorization: token
+                }
+            }).then((response) => {
+                expect(response.status).to.equal(200)
+                expect(response.body.message).to.equal("Registro excluído com sucesso")
+            });
+        });
+    });
+});
