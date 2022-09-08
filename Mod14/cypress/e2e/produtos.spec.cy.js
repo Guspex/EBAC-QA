@@ -1,3 +1,4 @@
+import contrato from '../contracts/products.contract'
 /// <reference types="cypress"/>
 
 describe('Testes da Funcionalidade Produtos', () => {
@@ -7,6 +8,13 @@ describe('Testes da Funcionalidade Produtos', () => {
             token = tkn
         })
     });
+
+    it('Deve validar contrato de produtos', () => {
+        cy.request('produtos').then(response => {
+            return contrato.validateAsync(response.body)
+        })
+    });
+
     it('Teste para listar produtos', () => {
         cy.request({
             method: 'GET',
