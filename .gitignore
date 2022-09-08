@@ -3,3 +3,4 @@
 .exe
 node_modules/
 jspm_packages/
+mochawesome-report/
