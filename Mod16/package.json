@@ -1,0 +1,14 @@
+{
+  "name": "testes-ebac-shop-mobile",
+  "version": "1.0.0",
+  "description": "Projeto de testes da Loja Ebac versão Mobile",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@wdio/cli": "^7.24.0"
+  }
+}
