@@ -50,18 +50,12 @@ exports.config = {
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [{
-    
-        // maxInstances can get overwritten per capability. So if you have an in-house Selenium
-        // grid with only 5 firefox instances available you can make sure that not more than
-        // 5 instances get started at a time.
-        maxInstances: 5,
-        //
-        browserName: 'chrome',
-        acceptInsecureCerts: true
-        // If outputDir is provided WebdriverIO can capture driver session logs
-        // it is possible to configure which logTypes to include/exclude.
-        // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
-        // excludeDriverLogs: ['bugreport', 'server'],
+        "platformName": "Android",
+        "appium:platformVersion": "11.0",
+        "appium:deviceName": "Pixel 4",
+        "appium:automationName": "UiAutomator2",
+        "appium:appPackage": "com.wdiodemoapp",
+        "appium:appActivity": ".MainActivity"
     }],
     //
     // ===================
@@ -95,6 +89,8 @@ exports.config = {
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
     baseUrl: 'http://localhost',
+    port: 4723,
+    path: '/wd/hub',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
@@ -110,8 +106,8 @@ exports.config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: ['chromedriver'],
-    
+    // services: [],
+    //
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
     // see also: https://webdriver.io/docs/frameworks
@@ -135,7 +131,7 @@ exports.config = {
     reporters: ['spec'],
 
 
-    
+
     //
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
@@ -284,10 +280,10 @@ exports.config = {
     // onComplete: function(exitCode, config, capabilities, results) {
     // },
     /**
-    * Gets executed when a refresh happens.
-    * @param {String} oldSessionId session ID of the old session
-    * @param {String} newSessionId session ID of the new session
-    */
+     * Gets executed when a refresh happens.
+     * @param {String} oldSessionId session ID of the old session
+     * @param {String} newSessionId session ID of the new session
+     */
     // onReload: function(oldSessionId, newSessionId) {
     // }
 }
