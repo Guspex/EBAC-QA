@@ -6,8 +6,13 @@ describe('Primeiro Teste', () => {
     it('Writing Forms', async () => {
         await $('~text-input').setValue('EBAC Teste')
         await $('~Dropdown').click()
-        await $('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/androidx.appcompat.widget.LinearLayoutCompat/android.widget.FrameLayout/android.widget.ListView/android.widget.CheckedTextView[4]').click()
+        const selector = 'new UiSelector().text("This app is awesome").className("android.widget.CheckedTextView")'
+        const button = await $(`android=${selector}`)
+        await button.click()
         await $('~button-Active').click()
-        await $('/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.Button[3]').click()
+    });
+    it('should be displayed', async () => {
+        const isDisplayed = await $("~parentPanel").isDisplayed()
+        expect(isDisplayed);
     });
 });
