@@ -6,6 +6,8 @@ let password = 'GD*peToHNJ1#c$sgk08EaYJQ'
 let user = 'gerente'
 let url = 'http://lojaebac.ebaconline.art.br'
 
+
+
 describe('Access admin panel', () => {
     it('Should be a login', async () => {
         await homeScreen.goToNextPage()
@@ -16,6 +18,6 @@ describe('Access admin panel', () => {
         await loginScreen.setLogin(user, password)
         await loginScreen.clickPass()
         await loginScreen.confirmPass(password)
-        expect(await myStoreScreen.getStoreName()).to.equal('EBAC - Shop');
+        expect(await myStoreScreen.getStoreName()).toEqual('EBAC - Shop');
     });
 });
