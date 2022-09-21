@@ -11,7 +11,7 @@ class LoginScreen {
         return $('id:bottom_button')
     }
 
-    get #continueCredintial(){
+    get #continueCredential(){
         return $('id:login_site_creds')
     }
 
@@ -40,7 +40,7 @@ class LoginScreen {
     }
 
     async clickContinueCredential(){
-        await this.#continueCredintial().click()
+        await this.#continueCredential().click()
     }
 
     async setLogin(email, password){
