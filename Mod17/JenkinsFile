@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Clonar o repositorio') {
+            steps {
+               git branch: 'main', url: 'https://github.com/LariTonetto/testes-api-cy.git'
+            }
+        }
+     stage('Instalar dependencias') {
+            steps {
+               sh 'npm install' 
+            }
+        }
+     stage('Executar testes') {
+            steps {
+               sh 'npx test'
+            }
+        }
+    }
+}
