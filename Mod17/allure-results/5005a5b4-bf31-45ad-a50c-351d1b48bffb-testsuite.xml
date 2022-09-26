@@ -1,0 +1,48 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1664217046258' stop='1664217084027'>
+    <name>Access admin panel</name>
+    <title>Access admin panel</title>
+    <test-cases>
+        <test-case start='1664217046271' status='passed' stop='1664217071017'>
+            <name>Should be a login</name>
+            <title>Should be a login</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='device' value='Pixel 4 11.0-11'/>
+            </parameters>
+            <steps/>
+            <attachments>
+                <attachment title='Execution video' source='9c73efbe-f545-456e-8746-dcdc925a35d7-attachment.mp4' type='video/mp4' size='165'/>
+            </attachments>
+        </test-case>
+        <test-case start='1664217071027' status='broken' stop='1664217084024'>
+            <name>Must register one product</name>
+            <title>Must register one product</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='device' value='Pixel 4 11.0-11'/>
+            </parameters>
+            <steps/>
+            <attachments>
+                <attachment title='Execution video' source='58c335b2-55d5-4959-a226-080ac3371f61-attachment.mp4' type='video/mp4' size='173'/>
+            </attachments>
+            <failure>
+                <message>Can't call click on element with selector "id:Add products" because element wasn't found</message>
+                <stack-trace>Error: Can't call click on element with selector "id:Add products" because element wasn't found
+                    at implicitWait (C:\Users\Guspex\Desktop\EBAC\Qualidade de Software\EBAC-QA\Mod17\node_modules\webdriverio\build\utils\implicitWait.js:34:19)
+                    at async Element.elementErrorHandlerCallbackFn (C:\Users\Guspex\Desktop\EBAC\Qualidade de Software\EBAC-QA\Mod17\node_modules\webdriverio\build\middlewares.js:20:29)
+                    at async Element.wrapCommandFn (C:\Users\Guspex\Desktop\EBAC\Qualidade de Software\EBAC-QA\Mod17\node_modules\@wdio\utils\build\shim.js:137:29)
+                    at async RegistroScreen.addProd (C:\Users\Guspex\Desktop\EBAC\Qualidade de Software\EBAC-QA\Mod17\test\screens\registro.screen.js:13:9)
+                    at async Context.&lt;anonymous> (C:\Users\Guspex\Desktop\EBAC\Qualidade de Software\EBAC-QA\Mod17\test\specs\login.spec.js:29:9)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

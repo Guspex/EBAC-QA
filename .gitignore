@@ -1,6 +1,7 @@
 .zip
 .msi
 .exe
+.mp4
 node_modules/
 jspm_packages/
 mochawesome-report/

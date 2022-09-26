@@ -1,0 +1,51 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1664216090747' stop='1664216115223'>
+    <name>Access admin panel</name>
+    <title>Access admin panel</title>
+    <test-cases>
+        <test-case start='1664216090760' status='passed' stop='1664216114985'>
+            <name>Should be a login</name>
+            <title>Should be a login</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='device' value='Pixel 4 11.0-11'/>
+            </parameters>
+            <steps/>
+            <attachments>
+                <attachment title='Execution video' source='6e357fd0-a5f6-4bf5-8434-1262096b59d2-attachment.mp4' type='video/mp4' size='165'/>
+            </attachments>
+        </test-case>
+        <test-case start='1664216114994' status='broken' stop='1664216115219'>
+            <name>Must register one product</name>
+            <title>Must register one product</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='device' value='Pixel 4 11.0-11'/>
+            </parameters>
+            <steps/>
+            <attachments>
+                <attachment title='Execution video' source='37bb2be3-9b53-4381-a852-f6f1c65b0c33-attachment.mp4' type='video/mp4' size='173'/>
+            </attachments>
+            <failure>
+                <message>The selector "com.woocommerce.android:id/navigation_bar_item_icon_view" used with strategy "css selector" is invalid! For more information on selectors visit the WebdriverIO docs at: https://webdriver.io/docs/selectors</message>
+                <stack-trace>invalid selector: The selector "com.woocommerce.android:id/navigation_bar_item_icon_view" used with strategy "css selector" is invalid! For more information on selectors visit the WebdriverIO docs at: https://webdriver.io/docs/selectors
+                    at getErrorFromResponseBody (C:\Users\Guspex\Desktop\EBAC\Qualidade de Software\EBAC-QA\Mod17\node_modules\webdriver\build\utils.js:198:12)
+                    at NodeJSRequest._request (C:\Users\Guspex\Desktop\EBAC\Qualidade de Software\EBAC-QA\Mod17\node_modules\webdriver\build\request\index.js:166:60)
+                    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                    at async Browser.wrapCommandFn (C:\Users\Guspex\Desktop\EBAC\Qualidade de Software\EBAC-QA\Mod17\node_modules\@wdio\utils\build\shim.js:137:29)
+                    at async Browser.$ (C:\Users\Guspex\Desktop\EBAC\Qualidade de Software\EBAC-QA\Mod17\node_modules\webdriverio\build\commands\browser\$.js:91:17)
+                    at async Browser.wrapCommandFn (C:\Users\Guspex\Desktop\EBAC\Qualidade de Software\EBAC-QA\Mod17\node_modules\@wdio\utils\build\shim.js:137:29)
+                    at async RegistroScreen.goToProducts (C:\Users\Guspex\Desktop\EBAC\Qualidade de Software\EBAC-QA\Mod17\test\screens\registro.screen.js:6:9)
+                    at async Context.&lt;anonymous> (C:\Users\Guspex\Desktop\EBAC\Qualidade de Software\EBAC-QA\Mod17\test\specs\login.spec.js:28:9)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

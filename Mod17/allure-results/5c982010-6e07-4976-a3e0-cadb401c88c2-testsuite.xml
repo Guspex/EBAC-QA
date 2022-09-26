@@ -1,0 +1,39 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1664218622615' stop='1664218685803'>
+    <name>Access admin panel</name>
+    <title>Access admin panel</title>
+    <test-cases>
+        <test-case start='1664218622635' status='passed' stop='1664218658390'>
+            <name>Should be a login</name>
+            <title>Should be a login</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='device' value='xiaomi redmi note 11-11.0'/>
+            </parameters>
+            <steps/>
+            <attachments>
+                <attachment title='Execution video' source='89074f3c-4fdb-49e9-a240-4c1bae5476b7-attachment.mp4' type='video/mp4' size='160'/>
+            </attachments>
+        </test-case>
+        <test-case start='1664218658394' status='passed' stop='1664218685800'>
+            <name>Must register one product</name>
+            <title>Must register one product</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='device' value='xiaomi redmi note 11-11.0'/>
+            </parameters>
+            <steps/>
+            <attachments>
+                <attachment title='Execution video' source='0c284c4e-4c6f-4f23-8215-640385efba02-attachment.mp4' type='video/mp4' size='168'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

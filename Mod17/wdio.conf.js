@@ -1,3 +1,5 @@
+const allure = require('allure-commandline')
+const video = require('wdio-video-reporter')
 exports.config = {
     //
     // ====================
@@ -50,14 +52,48 @@ exports.config = {
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [{
-        "platformName": "Android",
-        "appium:platformVersion": "11.0",
-        "appium:deviceName": "Pixel 4",
-        "appium:automationName": "UiAutomator2",
-        "appium:appPackage": "com.woocommerce.android",
-        "appium:appActivity": ".ui.main.MainActivity",
-        "appium:appWaitActivity": ".ui.login.LoginActivity"
+        //"platformName": "Android",
+        //"appium:platformVersion": "11.0",
+        //"appium:deviceName": "Pixel 4",
+        //"appium:automationName": "UiAutomator2",
+        //"appium:appPackage": "com.woocommerce.android",
+        //"appium:appActivity": ".ui.main.MainActivity",
+        //"appium:appWaitActivity": ".ui.login.LoginActivity"
+        project: "Meu 2 projeto BroserStack",
+        build: "2",
+        name: "teste_login",
+        device: "Xiaomi Redmi Note 11",
+        os_version: "11.0",
+        app: process.env.BROWSERSTACK_APP_ID || 'bs://45f8e703e7d0b2992f741cdf3062294cc1d493b0',
+        'browserstack.local': true
     }],
+    onComplete: function () {
+        const reportError = new Error('Could not generate Allure report')
+        const generation = allure(['generate', 'allure-results', '--clean'])
+        return new Promise((resolve, reject) => {
+            const generationTimeout = setTimeout(
+                () => reject(reportError),
+                5000)
+
+            generation.on('exit', function (exitCode) {
+                clearTimeout(generationTimeout)
+
+                if (exitCode !== 0) {
+                    return reject(reportError)
+                }
+
+                console.log('Allure report successfully generated')
+                resolve()
+            })
+        })
+    },
+    afterStep: async function (step, scenario, {
+        error,
+        duration,
+        passed
+    }, context) {
+        await driver.takeScreenshot();
+    },
     //
     // ===================
     // Test Configurations
@@ -89,9 +125,18 @@ exports.config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'http://localhost',
-    port: 4723,
-    path: '/wd/hub',
+    //baseUrl: 'http://localhost',
+    //port: 4723,
+    //services: ['appium'],
+    //path: '/wd/hub',
+
+    user: process.env.BROWSERSTACK_USERNAME || 'andrdienesfriedr_Tsd0y7',
+    key: process.env.BROWSERSTACK_ACCESS_KEY || 'eRnLM9E6pR7G1tqkXYR4',
+    services: [
+        ['browserstack', {
+            browserstackLocal: true
+        }]
+    ],
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
@@ -129,7 +174,17 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec'],
+    reporters: ['spec', [video, {
+            saveAllVideos: true, // If true, also saves videos for successful test cases
+            videoSlowdownMultiplier: 3, // Higher to get slower videos, lower for faster videos [Value 1-100]
+        }],
+        ['allure', {
+            outputDir: 'allure-results',
+            disableWebdriverStepsReporting: true,
+            disableWebdriverScreenshotsReporting: true,
+        }]
+    ],
+
 
 
 

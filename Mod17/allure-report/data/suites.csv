@@ -1,0 +1,5 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Mon Sep 26 15:53:03 BRT 2022","Mon Sep 26 15:53:26 BRT 2022","22798","","Access admin panel","","Access admin panel","Should be a login","Should be a login",""
+"passed","Mon Sep 26 15:57:38 BRT 2022","Mon Sep 26 15:58:05 BRT 2022","27406","","Access admin panel","","Access admin panel","Must register one product","Must register one product",""
+"passed","Mon Sep 26 15:53:26 BRT 2022","Mon Sep 26 15:53:46 BRT 2022","20261","","Access admin panel","","Access admin panel","Must register one product","Must register one product",""
+"passed","Mon Sep 26 15:57:02 BRT 2022","Mon Sep 26 15:57:38 BRT 2022","35755","","Access admin panel","","Access admin panel","Should be a login","Should be a login",""
