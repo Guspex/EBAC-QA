@@ -1,0 +1,27 @@
+[
+  {
+    "nome": "Fábio",
+    "nota": 7,
+    "curso": "QA"
+  },
+  {
+    "nome": "Rogério",
+    "nota": 8,
+    "curso": "FS"
+  },
+  {
+    "nome": "André",
+    "nota": 10,
+    "curso": "QA"
+  },
+  {
+    "nome": "Marcelo",
+    "cargo": "Professor",
+    "curso": "QA"
+  },
+  {
+    "nome": "Junior",
+    "cargo": "Professor",
+    "curso": "FS"
+  }
+]
