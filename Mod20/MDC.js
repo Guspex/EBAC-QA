@@ -13,3 +13,4 @@ var mdc = function(num1, num2) {
     return num1;
 }
 console.log(mdc(682,1650))
+export default mdc(a,b)

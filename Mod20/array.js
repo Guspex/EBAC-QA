@@ -21,3 +21,5 @@ for (var i = 0; i < array.length; i++) {
 
 console.log(indiceMaior)
 console.log(indiceMenor)
+let indices = [indiceMaior, indiceMenor]
+export default indices

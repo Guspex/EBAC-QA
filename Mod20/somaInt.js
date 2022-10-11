@@ -9,3 +9,4 @@ for (var i = 0; i < 1000; i++) {
 return totalDaSoma
 }
 console.log(getTotalDaSoma())
+export default totalDaSoma
