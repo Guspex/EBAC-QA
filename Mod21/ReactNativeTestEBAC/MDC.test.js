@@ -9,6 +9,6 @@ test('This is validated', () => {
     expect(tree).toMatchSnapshot();
 });
 
-test('That result of smaller', () => {
+test('That result is equal', () => {
     expect(mdc(10,20)).toEqual(10);
 })
