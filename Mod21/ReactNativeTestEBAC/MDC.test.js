@@ -1,7 +1,7 @@
 import {expect} from '@jest/globals';
 import React from "react";
 import renderer from "react-test-renderer";
-import {mdc} from "../../Mod20/mdc"
+import {mdc} from "../../Mod20/MDC"
 
 
 test('This is validated', () => {

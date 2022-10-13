@@ -1,4 +1,4 @@
-var mdc = function(num1, num2) {
+export function mdc(num1, num2) {
 
     var resto;
 
@@ -9,8 +9,6 @@ var mdc = function(num1, num2) {
         num2 = resto;
 
     } while (resto != 0);
-
+    console.log(num1);
     return num1;
 }
-console.log(mdc(682,1650))
-export default mdc(a,b)
