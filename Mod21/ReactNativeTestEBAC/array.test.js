@@ -1,7 +1,7 @@
 import {expect} from '@jest/globals';
 import React from "react";
 import renderer from "react-test-renderer";
-import indices from "../../Mod20/array"
+import indices from "../Mod20/array"
 
 
 test('This is validated', () => {
