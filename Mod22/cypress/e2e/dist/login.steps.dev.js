@@ -3,7 +3,7 @@
 var _cypressCucumberPreprocessor = require("@badeball/cypress-cucumber-preprocessor");
 
 /// <reference types="cypress" />
-var _require = require('../../support/pages'),
+var _require = require('../support/pages'),
     dashboardPage = _require.dashboardPage;
 
 (0, _cypressCucumberPreprocessor.Given)(' i visit the ebac webstore ', function () {

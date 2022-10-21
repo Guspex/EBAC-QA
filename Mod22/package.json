@@ -1,10 +1,15 @@
 {
   "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^13.0.2",
     "cypress": "^10.10.0",
     "cypress-cucumber-preprocessor": "^4.3.1",
     "vue": "^3.2.40"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true
-  }
+  },
+  "stepDefinitions": [
+    "[filepath].{js,ts}",
+    "cypress/support/step_definitions/**/*.{js,ts}"
+  ]
 }

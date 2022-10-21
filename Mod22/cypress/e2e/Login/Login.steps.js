@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-import { Given, When, Then } from "cypress-cucumber-preprocessor/steps"
+import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor"
 const {dashboardPage} = require('../../support/pages')
 
 Given(' i visit the ebac webstore ', () => {

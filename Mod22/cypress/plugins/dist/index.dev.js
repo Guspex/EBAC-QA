@@ -1,28 +1,29 @@
 "use strict";
 
 /// <reference types="cypress" />
-// ***********************************************************
-// This example plugins/index.js can be used to load plugins
-//
-// You can change the location of this file or turn off loading
-// the plugins file with the 'pluginsFile' configuration option.
-//
-// You can read more here:
-// https://on.cypress.io/plugins-guide
-// ***********************************************************
-// This function is called when a project is opened or re-opened (e.g. due to
-// the project's config changing)
-
-/**
- * @type {Cypress.PluginConfig}
- */
-// eslint-disable-next-line no-unused-vars
-module.exports = function (on, config) {// `on` is used to hook into various events Cypress emits
-  // `config` is the resolved Cypress config
-};
-
-var cucumber = require('cypress-cucumber-preprocessor')["default"];
+var cucumber = require('@badeball/cypress-cucumber-preprocessor')["default"];
 
 module.exports = function (on, config) {
   on('file:preprocessor', cucumber());
+};
+
+module.exports = {
+  entry: './path/to/my/entry/file.js'
+};
+
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+
+var webpack = require('webpack'); //to access built-in plugins
+
+
+module.exports = {
+  module: {
+    rules: [{
+      test: /\.txt$/,
+      use: 'raw-loader'
+    }]
+  },
+  plugins: [new HtmlWebpackPlugin({
+    template: './src/index.html'
+  })]
 };
