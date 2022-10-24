@@ -6,14 +6,14 @@ var data = require("../fixtures/data.json");
 var _require = require('../support/pages'),
     dashboardPage = _require.dashboardPage;
 
-describe('Access Admin Panel', function () {
-  context('Given i visit the ebac webstore', function () {
+describe('Access Login Panel', function () {
+  context('Given i visit the ebac webstore Login page', function () {
     before(function () {
-      cy.visit('/');
+      cy.visit('/my-account/');
     });
-    context("When i log in with user ".concat(data.usuario, " and password ").concat(data.senha, " "), function () {
+    context("When i enter a new user and new password", function () {
       beforeEach(function () {
-        cy.login(data.senha, data.usuario);
+        cy.login(data.newUser, data.newPass);
       });
       it('Then the admin dashboard page should be visible', function () {
         dashboardPage.siteName.should("be.visible");

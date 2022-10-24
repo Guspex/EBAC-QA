@@ -21,5 +21,5 @@ Cypress.Commands.add('login', function (pass, user) {
       cy.setCookie(key, value);
     });
   });
-  cy.visit('/wp-admin');
+  cy.visit('/my-account/');
 });

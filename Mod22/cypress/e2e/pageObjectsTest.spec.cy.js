@@ -2,16 +2,16 @@
 const data = require("../fixtures/data.json")
 const {dashboardPage} = require('../support/pages')
 
-describe('Access Admin Panel', () => {
+describe('Access Login Panel', () => {
   
-  context('Given i visit the ebac webstore', () => {
+  context('Given i visit the ebac webstore Login page', () => {
     before(() => {
-      cy.visit('/')
+      cy.visit('/my-account/')
     })
     
-    context(`When i log in with user ${data.usuario} and password ${data.senha} `, () => {
+    context(`When i enter a new user and new password`, () => {
       beforeEach(() => {
-        cy.login(data.senha, data.usuario)
+        cy.login(data.newUser, data.newPass)
       })
 
       it('Then the admin dashboard page should be visible', () => {

@@ -1,4 +1,4 @@
 import { dashboardPage } from './dashboard.page'
-import loginPage from './login.page'
+import registerPage from './register.page'
 
-export { dashboardPage, loginPage }
+export { dashboardPage, registerPage }

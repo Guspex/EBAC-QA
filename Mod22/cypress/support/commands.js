@@ -19,5 +19,5 @@ Cypress.Commands.add('login',(pass, user)=>{
             cy.setCookie(key, value)
         })
     })
-    cy.visit('/wp-admin')
+    cy.visit('/my-account/')
 })
