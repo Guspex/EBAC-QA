@@ -1,0 +1,14 @@
+# arquivo docker compose para subir a demo da loja EBAC
+# para subir a aplicação execute `docker-compose up -d`
+# para parar a aplicação execute `docker-compose down`
+version: "3.9"
+    
+services:
+  wp_db:
+    image: ernestosbarbosa/lojaebacdb
+  wp:
+    depends_on:
+      - wp_db
+    image: ernestosbarbosa/lojaebac
+    ports:
+      - "80:80"
