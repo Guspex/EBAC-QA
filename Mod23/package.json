@@ -5,7 +5,7 @@
   },
   "scripts": {
     "test": "npx cypress run",
-    "testEnv": "CYPRESS_HOST=http://localhost npx cypress open"
+    "testEnv": "npx cypress open"
   },
   "devDependencies": {
     "cypress-dotenv": "^2.0.0",

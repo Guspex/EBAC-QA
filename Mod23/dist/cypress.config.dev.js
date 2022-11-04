@@ -12,7 +12,7 @@ module.exports = defineConfig({
       return config;
     },
     env: {
-      baseUrl: 'http://localhost'
+      "baseUrl": "http://localhost"
     }
   }
 });

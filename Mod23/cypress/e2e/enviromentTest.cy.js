@@ -3,10 +3,10 @@
 describe('Enviroment Variables', () => {
     
     beforeEach(() => {
-        cy.visit(Cypress.env('HOST'))
+        cy.visit(Cypress.env('baseUrl'))
     });
 
     it('Cypress.json', () => {
-        cy.url().should('contain', Cypress.env('HOST'))
+        cy.url().should('contain', Cypress.env('baseUrl'))
     });
 });
