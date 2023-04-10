@@ -105,5 +105,3 @@ dist
 
 videos/
 screenshots/
-mochawesome-report/
-*.xml
