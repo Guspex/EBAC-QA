@@ -1,0 +1,32 @@
+version: '3.9'
+
+services:
+  banco:
+    image: ernestosbarbosa/lojaebacdb:latest
+    environment:
+      - MYSQL_DATABASE=wp_qe
+      - MYSQL_USER=wp_qe
+      - MYSQL_ROOT_PASSWORD=ebaconline
+      - MYSQL_PASSWORD=ebaconline
+    ports:
+      - 3306:3306
+  loja:
+    image: ernestosbarbosa/lojaebac:latest
+    environment:
+      - WORDPRESS_DB_HOST=banco
+      - WORDPRESS_DB_USER=wp_qe
+      - WORDPRESS_DB_PASSWORD=ebaconline
+      - WORDPRESS_DB_NAME=wp_qe
+      - WORDPRESS_TABLE_PREFIX=wp_
+    ports:
+      - 80:80
+    depends_on:
+      - banco
+
+  test:
+    build:
+      context: .
+    depends_on:
+      - banco
+      - loja
+    command: sh -c "npm run wdio"

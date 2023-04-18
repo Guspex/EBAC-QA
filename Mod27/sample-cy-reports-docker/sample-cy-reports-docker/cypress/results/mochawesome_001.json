@@ -1,0 +1,181 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-11-17T02:09:38.537Z",
+    "end": "2021-11-17T02:09:52.700Z",
+    "duration": 14163,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "aa63cd85-063b-4552-959f-6c3d19712a9a",
+      "title": "",
+      "fullFile": "cypress/integration/searchListTest.js",
+      "file": "cypress/integration/searchListTest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1a02190b-5873-465f-b01f-d260b6cd59f5",
+          "title": "Product Search",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Product Ingrid Running Jacket should be return correctly",
+              "fullTitle": "Product Search Product Ingrid Running Jacket should be return correctly",
+              "timedOut": null,
+              "duration": 3434,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_pages.homePage.searchMagnifier();\n_pages.productSearchPage.search(item.label);\n_pages.productSearchPage.productList.should('have.attr', 'title', item.label);\n_pages.productSearchPage.productList.each(el => {\n  expect(el.attr('title')).eq(item.label);\n});",
+              "err": {},
+              "uuid": "e17a68fd-c1d5-4a65-b01c-9b7dc6de845e",
+              "parentUUID": "1a02190b-5873-465f-b01f-d260b6cd59f5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Product Augusta Pullover Jacket should be return correctly",
+              "fullTitle": "Product Search Product Augusta Pullover Jacket should be return correctly",
+              "timedOut": null,
+              "duration": 2764,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_pages.homePage.searchMagnifier();\n_pages.productSearchPage.search(item.label);\n_pages.productSearchPage.productList.should('have.attr', 'title', item.label);\n_pages.productSearchPage.productList.each(el => {\n  expect(el.attr('title')).eq(item.label);\n});",
+              "err": {},
+              "uuid": "b7432dcc-8539-4cf2-9124-bd3db54f155f",
+              "parentUUID": "1a02190b-5873-465f-b01f-d260b6cd59f5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Product Josie Yoga Jacket should be return correctly",
+              "fullTitle": "Product Search Product Josie Yoga Jacket should be return correctly",
+              "timedOut": null,
+              "duration": 2427,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_pages.homePage.searchMagnifier();\n_pages.productSearchPage.search(item.label);\n_pages.productSearchPage.productList.should('have.attr', 'title', item.label);\n_pages.productSearchPage.productList.each(el => {\n  expect(el.attr('title')).eq(item.label);\n});",
+              "err": {},
+              "uuid": "8c274301-b131-4618-b064-066fd389f12f",
+              "parentUUID": "1a02190b-5873-465f-b01f-d260b6cd59f5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Product Stellar Solar Jacket should be return correctly",
+              "fullTitle": "Product Search Product Stellar Solar Jacket should be return correctly",
+              "timedOut": null,
+              "duration": 2424,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_pages.homePage.searchMagnifier();\n_pages.productSearchPage.search(item.label);\n_pages.productSearchPage.productList.should('have.attr', 'title', item.label);\n_pages.productSearchPage.productList.each(el => {\n  expect(el.attr('title')).eq(item.label);\n});",
+              "err": {},
+              "uuid": "687bb614-8c1a-45fa-8cbe-d06c56ce2401",
+              "parentUUID": "1a02190b-5873-465f-b01f-d260b6cd59f5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Product Typhon Performance Fleece-lined Jacket should be return correctly",
+              "fullTitle": "Product Search Product Typhon Performance Fleece-lined Jacket should be return correctly",
+              "timedOut": null,
+              "duration": 3041,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_pages.homePage.searchMagnifier();\n_pages.productSearchPage.search(item.label);\n_pages.productSearchPage.productList.should('have.attr', 'title', item.label);\n_pages.productSearchPage.productList.each(el => {\n  expect(el.attr('title')).eq(item.label);\n});",
+              "err": {},
+              "uuid": "34811c2c-6f29-445c-85ff-f46b0c0f601f",
+              "parentUUID": "1a02190b-5873-465f-b01f-d260b6cd59f5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e17a68fd-c1d5-4a65-b01c-9b7dc6de845e",
+            "b7432dcc-8539-4cf2-9124-bd3db54f155f",
+            "8c274301-b131-4618-b064-066fd389f12f",
+            "687bb614-8c1a-45fa-8cbe-d06c56ce2401",
+            "34811c2c-6f29-445c-85ff-f46b0c0f601f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 14090,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}
