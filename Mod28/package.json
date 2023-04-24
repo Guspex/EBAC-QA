@@ -11,7 +11,7 @@
     "pretest:customers": "webpack",
     "test:customers": "k6 run dist/customers.test.js"
   },
-  "author": "LariTonetto",
+  "author": "André Dienes Friedrich",
   "license": "ISC",
   "dependencies": {
     "@babel/core": "^7.17.10",
