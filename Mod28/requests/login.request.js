@@ -3,7 +3,7 @@ import http from 'k6/http'
 import Utils from '../utils/utils.js'
 
 export default class Login{
-    #token
+    token
 
     access(user, pass){
         let response = http.post(`${Utils.getBaseUrl()}login`, JSON.stringify(
@@ -17,13 +17,13 @@ export default class Login{
                 "Accept": "application/json"
             }
         })
-        this.#token = response.json('accessToken')
+        this.token = response.json('accessToken')
         check(response, {
             "status deve ser 201": (r) => r.status === 201
         })
     }
 
     getToken(){
-        return this.#token
+        return this.token
     }
 }
