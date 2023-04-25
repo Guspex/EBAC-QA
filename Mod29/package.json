@@ -7,7 +7,7 @@
     "test": "npx wdio run ./config/wdio.conf.js",
     "report": "npx allure open allure-report"
   },
-  "author": "",
+  "author": "André Dienes Friedrich",
   "license": "ISC",
   "devDependencies": {
     "@wdio/appium-service": "^7.19.5",
@@ -31,11 +31,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LariTonetto/modulo-29.git"
+    "url": "git+https://github.com/Guspex/EBAC-QA/tree/main/Mod29"
   },
   "keywords": [],
   "bugs": {
-    "url": "https://github.com/LariTonetto/modulo-29/issues"
+    "url": "https://github.com/Guspex/EBAC-QA/issues"
   },
-  "homepage": "https://github.com/LariTonetto/modulo-29#readme"
+  "homepage": "https://github.com/Guspex/EBAC-QA"
 }
