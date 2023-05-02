@@ -7,7 +7,7 @@ exports.config = {
     port: 4723,
     path: '/wd/hub',
     // user: "lojaebac_gBJk0x",
-    // key: "dQfHqx13fxpsVg1Ns1Yc",
+    // key: "tzLgsdpJn4JiUirvgHRj",
 
     specs: [
         './test/specs/**/*.spec.js'
