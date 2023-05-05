@@ -9,7 +9,7 @@ function getConfig(){
         case 'saucelabs':
             return sauceConf
         case 'browserstack':
-            return browseConf
+            return bsConf
 
     }
 }
