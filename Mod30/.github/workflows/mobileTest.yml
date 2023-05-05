@@ -20,6 +20,7 @@ jobs:
               run: npm test
             - name: Publish Report
               uses: peaceiris/actions-gh-pages@v3
+              if: always()
               with:
                 github_token: ${{secrets.GITHUB_TOKEN}}
                 publish_dir: ./alure-repot
