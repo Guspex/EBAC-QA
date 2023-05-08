@@ -18,3 +18,4 @@ import './commands'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+require('@reportportal/agent-js-cypress/lib/commands/reportPortalCommands');

@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "@reportportal/agent-js-cypress": "^5.1.2"
+  }
+}
