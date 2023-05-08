@@ -1,6 +1,6 @@
 require('dotenv').config()
 
-const { generalConf } = require('./generalConf')
+const { generalConf } = require('./general.conf')
 const { hooksConf } = require('./hooks.conf')
 const { reporterConf } = require('./report.conf')
 const { specsConf } = require('./specs.conf')
