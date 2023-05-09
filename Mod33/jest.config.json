@@ -1,0 +1,6 @@
+{
+    "setupFiles": ["dotenv/config"],
+    "reporters": [
+        "default"
+    ]
+}

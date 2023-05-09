@@ -1,0 +1,17 @@
+{
+  "name": "ebac-injection-testing",
+  "version": "1.0.0",
+  "description": "Testes de Injection",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/jest": "^27.4.1",
+    "dotenv": "^16.0.0",
+    "jest": "^27.5.1",
+    "supertest": "^6.2.2"
+  }
+}
