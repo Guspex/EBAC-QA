@@ -6,6 +6,7 @@ const dotenvPlugin = require('cypress-dotenv');
 const registerReportPortalPlugin = require('@reportportal/agent-js-cypress/lib/plugin');
 
 module.exports = defineConfig({
+  projectId: 'cdkv8i',
   reporter: '@reportportal/agent-js-cypress',
   reporterOptions: {
     endpoint: 'https://demo.reportportal.io/api/v1',
