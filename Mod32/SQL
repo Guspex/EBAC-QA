@@ -50,3 +50,4 @@ GROUP BY A.actor_id
 ORDER BY QtFilme DESC
 )
 AS FilmesMaisDe2Horas;
+ 

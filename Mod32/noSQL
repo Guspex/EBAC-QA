@@ -20,3 +20,4 @@ db.biblioteca.find({$and: [{status: {$eq: 'PUBLISH'}, pageCount: {$lt: 300}}]}).
 db.biblioteca.find({title: {$regex: /MongoDB|SQL Server/}}).count()
 db.biblioteca.find({isbn: {$regex: /^18/}}).count()
 db.biblioteca.find({longDescription: {$regex: /.ava|.obile/}}).count()
+ 
