@@ -3,9 +3,8 @@
 var _require = require("cypress"),
     defineConfig = _require.defineConfig;
 
-var dotenvPlugin = require('cypress-dotenv');
+var dotenvPlugin = require('cypress-dotenv'); //const registerReportPortalPlugin = require('@reportportal/agent-js-cypress/lib/plugin');
 
-var registerReportPortalPlugin = require('@reportportal/agent-js-cypress/lib/plugin');
 
 module.exports = defineConfig({
   projectId: 'cdkv8i',
@@ -26,7 +25,7 @@ module.exports = defineConfig({
   e2e: {
     setupNodeEvents: function setupNodeEvents(on, config) {
       config = dotenvPlugin(config);
-      return config, registerReportPortalPlugin(on, config);
+      return config;
     },
     env: {
       "baseUrl": "http://localhost"
