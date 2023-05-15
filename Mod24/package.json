@@ -1,0 +1,20 @@
+{
+  "name": "teste de api",
+  "version": "1.0.0",
+  "description": "Testes de API com Supertest",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:healthCheck": "jest --testNamePattern=HealthCheck",
+    "test:e2e": "jest --testNamePattern=E2E"
+  },
+  "author": "Larissa Tonetto",
+  "license": "ISC",
+  "dependencies": {
+    "@types/jest": "^27.4.1",
+    "dotenv": "^16.0.0",
+    "jest": "^27.5.1",
+    "jest-html-reporters": "^3.0.6",
+    "supertest": "^6.2.2"
+  }
+}

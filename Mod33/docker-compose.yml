@@ -1,0 +1,29 @@
+version: "3"
+services:
+  api:
+    image: ernestosbarbosa/ebac-api-sec:latest
+    depends_on:
+      - postgres
+      - mongo
+    ports:
+      - "3000:3000"
+    environment: 
+      - POSTGRES_HOST_NAME=postgres
+      - MONGODB_URL=mongodb://mongodb:mongodb@mongo:27017
+
+  postgres:
+    image: postgres:11.2-alpine
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+    ports:
+      - "5432:5432"
+
+  mongo:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: mongodb
+      MONGO_INITDB_ROOT_PASSWORD: mongodb
+    ports:
+      - "27017:27017"

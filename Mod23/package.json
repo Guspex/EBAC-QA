@@ -9,6 +9,7 @@
     "testCmdEnv": "npx cypress open --env HOST=http://localhost"
   },
   "devDependencies": {
+    "@reportportal/agent-js-cypress": "^5.1.2",
     "cypress-dotenv": "^2.0.0",
     "dotenv": "^16.0.3"
   }

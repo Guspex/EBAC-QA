@@ -1,0 +1,24 @@
+{
+  "name": "sample-cy-reports",
+  "version": "1.0.0",
+  "description": "Exemplos de relatórios",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run --reporter mochawesome --reporter-options reportDir=\"cypress/results\",overwrite=false,html=false,json=true && npx mochawesome-merge \"cypress/results/*.json\" > mochawesome.json && npx marge mochawesome.json",
+    "test:allure": "npx cypress run --env allure=true && npm run allure:generate",
+    "allure:open": "npx allure serve",
+    "allure:generate": "npx allure generate allure-results --clean -o allure-report",
+    "sorry:cypress": "CYPRESS_API_URL=\"http://localhost:1234/\" npx cy2 run --record --key EBAC --parallel --ci-build-id `date +%s`"
+  },
+  "author": "ernestosbarbosa",
+  "license": "ISC",
+  "dependencies": {
+    "@shelex/cypress-allure-plugin": "^2.19.5",
+    "allure-commandline": "^2.13.8",
+    "cy2": "^1.3.0",
+    "cypress": "^8.7.0",
+    "mochawesome": "^7.0.1",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^6.0.1"
+  }
+}

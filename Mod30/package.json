@@ -1,0 +1,27 @@
+{
+    "name": "testes-mobile-ebac-shop",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "npx wdio run ./configs/wdio.conf.js",
+        "report": "npx allure open allure-report"
+    },
+    "keywords": [],
+    "author": "André Dienes Friedrich",
+    "license": "ISC",
+    "dependencies": {
+        "@wdio/allure-reporter": "^7.10.1",
+        "@wdio/appium-service": "^7.10.1",
+        "@wdio/browserstack-service": "^7.11.1",
+        "@wdio/cli": "^7.11.1",
+        "@wdio/local-runner": "^7.11.1",
+        "@wdio/mocha-framework": "^7.11.1",
+        "@wdio/sauce-service": "^7.31.1",
+        "@wdio/spec-reporter": "^7.10.1",
+        "allure-commandline": "^2.13.8",
+        "appium": "^1.21.0",
+        "dotenv": "^14.3.2",
+        "wdio-video-reporter": "^3.1.2"
+    }
+}

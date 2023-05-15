@@ -1,0 +1,7 @@
+{
+    "setupFiles": ["dotenv/config"],
+    "reporters": [
+        "default",
+        "jest-html-reporters"
+    ]
+}

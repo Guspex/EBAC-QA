@@ -1,0 +1,11 @@
+{
+    "baseUrl": "http://lojaebac.ebaconline.art.br",
+    "projectId": "EBAC",
+    "reporter": "mochawesome",
+    "reporterOptions": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      }
+}

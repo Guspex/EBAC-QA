@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="16.6550" tests="3" failures="1">
+  <testsuite name="Root Suite" timestamp="2023-04-10T11:46:53" tests="0" file="cypress/integration/login.spec.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Funcionalidade Login" timestamp="2023-04-10T11:46:53" tests="3" time="16.6550" failures="1">
+    <testcase name="Funcionalidade Login Login com sucesso usando Comando customizado" time="10.2510" classname="Login com sucesso usando Comando customizado">
+    </testcase>
+    <testcase name="Funcionalidade Login Login usando fixture" time="6.4040" classname="Login usando fixture">
+    </testcase>
+    <testcase name="Funcionalidade Login Deve fazer login com sucesso - sem otimização" time="0.0000" classname="Deve fazer login com sucesso - sem otimização">
+      <failure message="Timed out retrying after 4000ms: expected &apos;&lt;p&gt;&apos; to contain &apos;Olá, aluno_ebac&apos;" type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 4000ms: expected '<p>' to contain 'Olá, aluno_ebac'
+    at Context.eval (http://lojaebac.ebaconline.art.br/__cypress/tests?p=cypress\integration\login.spec.js:130:62)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

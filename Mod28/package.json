@@ -1,0 +1,26 @@
+{
+  "name": "ebac-performance-com-k6",
+  "version": "1.0.0",
+  "description": "Testes de Perfomance Utilizando o K6",
+  "main": "index.js",
+  "scripts": {
+    "pretest:user": "webpack",
+    "test:user": "k6 run dist/user.test.js",
+    "pretest:products": "webpack",
+    "test:products": "k6 run dist/products.test.js",
+    "pretest:customers": "webpack",
+    "test:customers": "k6 run dist/customers.test.js"
+  },
+  "author": "André Dienes Friedrich",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.17.10",
+    "@babel/preset-env": "^7.17.10",
+    "babel-loader": "^8.2.5",
+    "core-js": "^3.22.4",
+    "dotenv": "^16.0.0",
+    "k6": "^0.0.0",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2"
+  }
+}
