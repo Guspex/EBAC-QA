@@ -8,4 +8,11 @@ describe('Enviroment Variables', function () {
   it('Cypress.json', function () {
     cy.url().should('contain', Cypress.env('baseUrl'));
   });
+  it('Config teste Env', {
+    env: {
+      myEnv: 'local'
+    }
+  }, function () {
+    cy.log(Cypress.env('myEnv'));
+  });
 });

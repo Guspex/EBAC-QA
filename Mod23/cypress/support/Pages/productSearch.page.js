@@ -1,4 +1,3 @@
-
 /// <reference types="cypress" />
 export const productSearchPage = {
     get autocompleteInput() { return cy.get('#tbay-header .tbay-search') },

@@ -1,0 +1,14 @@
+{
+  "name": "sample-cy-dynamic-validations",
+  "version": "1.0.0",
+  "description": "Exemplos de criação dinâmica de testes e validações",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run"
+  },
+  "author": "ernestosbarbosa",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^8.7.0"
+  }
+}

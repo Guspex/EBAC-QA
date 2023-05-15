@@ -9,4 +9,12 @@ describe('Enviroment Variables', () => {
     it('Cypress.json', () => {
         cy.url().should('contain', Cypress.env('baseUrl'))
     });
+
+    it('Config teste Env',{
+        env: {
+        myEnv: 'local'
+        }
+    }, () => {
+        cy.log(Cypress.env('myEnv'))
+    });
 });
