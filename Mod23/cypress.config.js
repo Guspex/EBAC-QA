@@ -13,7 +13,7 @@ module.exports = defineConfig({
     token: '323353a2-b1e9-44d6-afcf-5a096c34eb64',
     launch: 'guspex_TEST_EXAMPLE',
     project: 'guspex_personal',
-    description: 'Teste para Mod31 EBAC',
+    description: 'Teste para Mod23 EBAC',
     attributes: [
       {
         key: 'attributeKey',
