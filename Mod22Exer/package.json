@@ -1,8 +1,0 @@
-{
-  "dependencies": {
-    "cypress": "^10.10.0"
-  },
-  "scripts":{
-    "test:allure": "npx cypress run --env allure=true && npm run allure:generate"
-  }
-}

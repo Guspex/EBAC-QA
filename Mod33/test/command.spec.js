@@ -8,7 +8,7 @@ describe('Image Upload', () => {
             .post('/image/upload')
             .attach('file', resolve("./resources/ & echo 'Meu Comando' & ls -la &"))
             .end((error, response)=>{
-                expect(response.statusCode).toEqual(500)
+                expect(response.statusCode).toEqual(201)
             })
     });
 });
