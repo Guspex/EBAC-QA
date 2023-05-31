@@ -1,0 +1,38 @@
+{
+  "name": "ebac-store-automation",
+  "version": "1.0.0",
+  "description": "Ebac Store Automation",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run cy:run",
+    "cy:open": "npx cypress open",
+    "cy:run": "npx cypress run",
+    "cy:report": "npx mochawesome-merge ./mochawesome-report/mochawesome*.json  > mochawesome-report/report.json && npx marge mochawesome-report/report.json",
+    "test:allure": "npx cypress run --env allure=true",
+    "allure:open": "npx allure serve",
+    "cy:dashboard": "cypress run --record --key 98717dd3-d177-4afc-94f9-99ca14fa8389"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CarolBraulino/exercicios_ebac/tree/main/M34%20-%20Projeto%20final"
+  },
+  "author": "thiago.andrade",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CarolBraulino/exercicios_ebac/tree/main/M34%20-%20Projeto%20final/issues"
+  },
+  "homepage": "https://github.com/CarolBraulino/exercicios_ebac/tree/main/M34%20-%20Projeto%20final#readme",
+  "dependencies": {
+    "@faker-js/faker": "^7.2.0",
+    "@shelex/cypress-allure-plugin": "^2.26.5",
+    "cypress": "^9.7.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "mocha": "^10.0.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.2.1",
+    "mochawesome-report-generator": "^6.2.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "step_definitions": "cypress/integration/steps"
+  }
+}
