@@ -14,14 +14,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CarolBraulino/exercicios_ebac/tree/main/M34%20-%20Projeto%20final"
+    "url": "git+https://github.com/Guspex/EBAC-QA/tree/main/Mod34/US001"
   },
   "author": "thiago.andrade",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/CarolBraulino/exercicios_ebac/tree/main/M34%20-%20Projeto%20final/issues"
-  },
-  "homepage": "https://github.com/CarolBraulino/exercicios_ebac/tree/main/M34%20-%20Projeto%20final#readme",
+  "homepage": "https://github.com/Guspex/EBAC-QA/tree/main/Mod34/",
   "dependencies": {
     "@faker-js/faker": "^7.2.0",
     "@shelex/cypress-allure-plugin": "^2.26.5",
