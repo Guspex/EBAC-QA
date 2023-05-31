@@ -1,5 +1,5 @@
 {
-  "name": "M34 - Projeto final",
+  "name": "Mod34 - Projeto final",
   "version": "1.0.0",
   "description": "Automation for API Testing with Cypress",
   "main": "index.js",
@@ -8,18 +8,15 @@
     "cy:run": "npx cypress run",
     "cy:report": "npx mochawesome-merge ./mochawesome-report/mochawesome*.json  > mochawesome-report/report.json && npx marge mochawesome-report/report.json",
     "cy:run-ci": "start-server-and-test start http://localhost:3000/ test",
-    "cy:dashboard": "cypress run --record --key 7b7aacec-07e0-4ca9-b3f1-a5b26eddebf0"
+    "cy:dashboard": "cypress run --record --key 4584c269-b28d-4a8e-922d-54dac41d0598"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CarolBraulino/exercicios_ebac/tree/main/M34%20-%20Projeto%20final.git"
+    "url": "git+https://github.com/Guspex/EBAC-QA/tree/main/Mod34/US003"
   },
   "author": "André Dienes Friedrich",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/CarolBraulino/exercicios_ebac/tree/main/M34%20-%20Projeto%20final/issues"
-  },
-  "homepage": "https://github.com/CarolBraulino/exercicios_ebac/tree/main/M34%20-%20Projeto%20final#readme",
+  "homepage": "https://github.com/Guspex/EBAC-QA/tree/main",
   "dependencies": {
     "cypress": "^9.5.0",
     "cypress-multi-reporters": "^1.6.1",

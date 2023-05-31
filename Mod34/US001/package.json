@@ -10,15 +10,15 @@
     "cy:report": "npx mochawesome-merge ./mochawesome-report/mochawesome*.json  > mochawesome-report/report.json && npx marge mochawesome-report/report.json",
     "test:allure": "npx cypress run --env allure=true",
     "allure:open": "npx allure serve",
-    "cy:dashboard": "cypress run --record --key 98717dd3-d177-4afc-94f9-99ca14fa8389"
+    "cy:dashboard": "cypress run --record --key 4584c269-b28d-4a8e-922d-54dac41d0598"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Guspex/EBAC-QA/tree/main/Mod34/US001"
   },
-  "author": "thiago.andrade",
+  "author": "André Dienes Friedrich",
   "license": "ISC",
-  "homepage": "https://github.com/Guspex/EBAC-QA/tree/main/Mod34/",
+  "homepage": "https://github.com/Guspex/EBAC-QA/tree/main",
   "dependencies": {
     "@faker-js/faker": "^7.2.0",
     "@shelex/cypress-allure-plugin": "^2.26.5",
