@@ -1,0 +1,80 @@
+name: Playwright - E2E e API
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'Playwright/**'
+      - '.github/workflows/playwright.yml'
+  pull_request:
+    paths:
+      - 'Playwright/**'
+      - '.github/workflows/playwright.yml'
+  schedule:
+    # Execução diária (dias úteis, 08h de Brasília) para monitorar os sistemas sob teste
+    - cron: '0 11 * * 1-5'
+  workflow_dispatch:
+    inputs:
+      suite:
+        description: 'Suíte a executar (smoke = validação rápida, ex.: pós-hotfix)'
+        type: choice
+        options: [todos, smoke, regression]
+        default: todos
+
+concurrency:
+  group: playwright-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: ${{ matrix.project }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        project: [e2e, api]
+    defaults:
+      run:
+        working-directory: Playwright
+    env:
+      GREP: ${{ inputs.suite == 'smoke' && '--grep @smoke' || inputs.suite == 'regression' && '--grep @regression' || '' }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: Playwright/package-lock.json
+
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: Verificar tipos (TypeScript)
+        if: matrix.project == 'api'
+        run: npm run typecheck
+
+      - name: Instalar navegador
+        if: matrix.project == 'e2e'
+        run: npx playwright install --with-deps chromium
+
+      - name: Executar testes
+        run: npx playwright test --project=${{ matrix.project }} $GREP
+
+      - name: Publicar relatório HTML
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report-${{ matrix.project }}
+          path: Playwright/playwright-report/
+          retention-days: 14
+
+      - name: Publicar resultados JUnit
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: junit-${{ matrix.project }}
+          path: Playwright/test-results/junit.xml
+          retention-days: 14
