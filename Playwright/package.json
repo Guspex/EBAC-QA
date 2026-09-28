@@ -1,0 +1,27 @@
+{
+  "name": "ebac-qa-playwright",
+  "version": "1.0.0",
+  "description": "Testes E2E (Sauce Demo) e de API (ServeRest) com Playwright",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "playwright test",
+    "test:e2e": "playwright test --project=e2e",
+    "test:api": "playwright test --project=api",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:regression": "playwright test --grep @regression",
+    "api:local": "serverest --timeout 3600",
+    "report": "playwright show-report",
+    "typecheck": "tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^22.20.4",
+    "serverest": "^3.2.2",
+    "typescript": "^5.9.3"
+  },
+  "private": true
+}

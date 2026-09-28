@@ -36,3 +36,4 @@ Aqui estão os exercícios da EBAC do curso de Engenheiro de Qualidade de Softwa
 - [x] Módulo 32 - Banco de dados SQL e noSQL
 - [x] Módulo 33 - Testes de Segurança
 - [x] Módulo 34 - Projeto Final
+- [x] Extra - [Playwright: testes E2E e de API com GitHub Actions](Playwright/)
